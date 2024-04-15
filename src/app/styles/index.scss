@@ -1,6 +1,69 @@
 @use 'reset';
+@use 'fonts';
 
 body {
-    height: 200vh;
-    // background-color: colors.$primary;
+    font-family: 'Inter', sans-serif;
+    height: 100%;
+}
+
+#root {
+    padding: 10px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    @media screen and (min-width: 576px) {
+        padding: 0;
+        width: 540px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 720px;
+    }
+
+    @media screen and (min-width: 992px) {
+        width: 920px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 1140px;
+    }
+
+    @media screen and (min-width: 1400px) {
+        width: 1320px;
+    }
+}
+
+@import './input.scss';
+@import './button.scss';
+@import './auth.scss';
+
+.squarePattern {
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%; left: 50%;
+        translate: -50% -50%;
+        width: 90vw;
+        height: 80vh;
+        background:
+            linear-gradient(90deg, #CFD1D388 2%, transparent 0%),
+            linear-gradient(white 99%, transparent 0%);
+
+        background-color: #CFD1D388;
+        background-size: 55px 55px;
+        box-shadow: inset 0px 0px 100px 100px #ffffffff;
+        z-index: -1;
+    }
 }

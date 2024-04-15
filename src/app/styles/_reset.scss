@@ -1,7 +1,7 @@
 @use 'colors';
 
 @use '@neat-core/footing-styles/vars' with (
-    $mode: "pretty",
+    $mode: "default",
     
     $color-primary: colors.$primary,
     $color-secondary: colors.$secondary,

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    ПОЗДРАВЛЯЕМ!
+    ВЫ УСПЕШНО ПРОШЛИ ДИАГНОСТИКУ. ВАШ ПОРЯДКОВЫЙ НОМЕР - <span></span>. ОТПРАВЬТЕ ЕГО _______.
+    ОЖИДАЙТЕ ИНТЕРПРЕТАЦИИ РЕЗУЛЬТАТОВ ОТ ПРЕДСТАВИТЕЛЕЙ В ТЕЧЕНИЕ _____.
+
+    <script>
+        const finishData = localStorage.getItem('sequence');
+
+        document.querySelector('span').innerHTML = finishData
+    </script>
+</body>
+
+</html>
